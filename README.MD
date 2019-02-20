@@ -12,11 +12,11 @@ A duplicate of Flappy bird for personal study in game development way back time.
 ```
 1. git clone https://github.com/xgenem/trollbird.git TrollBird
 2. In your Eclipse IDE:
-...1. Go to File > Import > General
-...2. Select Projects from Folder or Archive
-...3. Click Next
-...4. Select the directory
-...5. Click Finish
+    1. Go to File > Import > General
+    2. Select Projects from Folder or Archive
+    3. Click Next
+    4. Select the directory
+    5. Click Finish
 ```
 ### License
 
