@@ -14,7 +14,11 @@ import javax.swing.JFrame;
 
 public class TrollBird extends Canvas implements Runnable {
     
-    private static int WIDTH = 320;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static int WIDTH = 320;
     private static int HEIGHT = WIDTH / 12 * 9;
     private static int SCALE = 2;
     private String TITLE = "Troll Bird";
@@ -75,7 +79,6 @@ public class TrollBird extends Canvas implements Runnable {
     }
     
     public void run() {
-        
         long lastTime = System.nanoTime();
         final double amountOfTicks = 60.0;
         double ns = 1000000000 / amountOfTicks;
@@ -142,19 +145,30 @@ public class TrollBird extends Canvas implements Runnable {
         int keycode = e.getKeyCode();
         
         if(keycode == e.VK_SPACE) {
-            bird.setY(-5);
+            bird.setY(100);
         }  
     }
     
     public void keyReleased(KeyEvent e) {
         int keycode = e.getKeyCode();
         if(keycode == e.VK_SPACE) {
-            bird.setY(-5);
+            bird.setY(100);
         }
     }
     
+    public SpriteSheet getSpriteSheet() {
+        return ss;
+    }
+    
+    public SpriteSheet getPipeSheet() {
+        return pipeSheet;
+    }
+    
+
+    
     public static void main(String[] args) {
         TrollBird bird = new TrollBird();
+        bird.setFocusable(true);
         
         // Canvas Size
         bird.setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
@@ -168,15 +182,8 @@ public class TrollBird extends Canvas implements Runnable {
         f.setLocationRelativeTo(null);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
+        f.setFocusable(true);
         
         bird.start();
-    }
-    
-    public SpriteSheet getSpriteSheet() {
-        return ss;
-    }
-    
-    public SpriteSheet getPipeSheet() {
-        return pipeSheet;
     }
 }
