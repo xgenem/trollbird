@@ -1,5 +1,5 @@
 # TrollBird
-A duplicate of Flappy bird for personal study in game development way back time.
+A duplicate of Flappy bird for personal study in game development using Java Programming Language.
 
 ### Goals
 * Review Java Programming Language and OOP
